@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchPanelLibrary", "SearchPanelLibrary\SearchPanelLibrary.csproj", "{2BF2A93D-0586-4222-98EE-FC09C77EF6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSearchUI", "CRMSearchUI\CRMSearchUI.csproj", "{AA2CBCCD-5ECB-43DB-AB1E-487ECA53BCB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Without DP", "Without DP", "{A3C2DFB7-4B6F-45CC-89BE-128D9AECBAC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "With DP", "With DP", "{47655C94-599D-4BF6-ABF5-BD889111CC09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSearchUIWithDP", "CRMSearchUIWithDP\CRMSearchUIWithDP.csproj", "{E924D551-5513-474B-9993-6D5BCCC9234A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Attached Properties - BuiltIn", "Attached Properties - BuiltIn", "{280B2885-60B0-422D-A54C-42766633133E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedPropertiesOutOfBoxWPFApp", "AttachedPropertiesOutOfBoxWPFApp\AttachedPropertiesOutOfBoxWPFApp.csproj", "{5B5B0B91-A8BD-4B8A-A57A-B9F33F6CAE4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachedPropertiesCustomWPFApp", "AttachedPropertiesCustomWPFApp\AttachedPropertiesCustomWPFApp.csproj", "{9BACCE85-9C81-47C8-B9A8-49E905B79E27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Attached Properties - Custom", "Attached Properties - Custom", "{D9278F9B-5311-4F42-8845-07FDA7A22220}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BF2A93D-0586-4222-98EE-FC09C77EF6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF2A93D-0586-4222-98EE-FC09C77EF6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF2A93D-0586-4222-98EE-FC09C77EF6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF2A93D-0586-4222-98EE-FC09C77EF6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA2CBCCD-5ECB-43DB-AB1E-487ECA53BCB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA2CBCCD-5ECB-43DB-AB1E-487ECA53BCB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA2CBCCD-5ECB-43DB-AB1E-487ECA53BCB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA2CBCCD-5ECB-43DB-AB1E-487ECA53BCB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E924D551-5513-474B-9993-6D5BCCC9234A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E924D551-5513-474B-9993-6D5BCCC9234A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E924D551-5513-474B-9993-6D5BCCC9234A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E924D551-5513-474B-9993-6D5BCCC9234A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5B0B91-A8BD-4B8A-A57A-B9F33F6CAE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5B0B91-A8BD-4B8A-A57A-B9F33F6CAE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5B0B91-A8BD-4B8A-A57A-B9F33F6CAE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5B0B91-A8BD-4B8A-A57A-B9F33F6CAE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BACCE85-9C81-47C8-B9A8-49E905B79E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BACCE85-9C81-47C8-B9A8-49E905B79E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BACCE85-9C81-47C8-B9A8-49E905B79E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BACCE85-9C81-47C8-B9A8-49E905B79E27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BF2A93D-0586-4222-98EE-FC09C77EF6DF} = {A3C2DFB7-4B6F-45CC-89BE-128D9AECBAC5}
+		{AA2CBCCD-5ECB-43DB-AB1E-487ECA53BCB4} = {A3C2DFB7-4B6F-45CC-89BE-128D9AECBAC5}
+		{E924D551-5513-474B-9993-6D5BCCC9234A} = {47655C94-599D-4BF6-ABF5-BD889111CC09}
+		{5B5B0B91-A8BD-4B8A-A57A-B9F33F6CAE4E} = {280B2885-60B0-422D-A54C-42766633133E}
+		{9BACCE85-9C81-47C8-B9A8-49E905B79E27} = {D9278F9B-5311-4F42-8845-07FDA7A22220}
+	EndGlobalSection
+EndGlobal
