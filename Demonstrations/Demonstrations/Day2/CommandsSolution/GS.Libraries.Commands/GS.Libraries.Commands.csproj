@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE6C6FC4-33EA-45C4-AE52-17FA89CF16EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GS.Libraries.Commands</RootNamespace>
+    <AssemblyName>GS.Libraries.Commands</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoadCustomersCommand.cs" />
+    <Compile Include="LoadOrdersCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GS.Libraries.ModelServices.Factories\GS.Libraries.ModelServices.Factories.csproj">
+      <Project>{32807dfa-c944-4b78-ade6-89c7ae3161e1}</Project>
+      <Name>GS.Libraries.ModelServices.Factories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.ModelServices.Interfaces\GS.Libraries.ModelServices.Interfaces.csproj">
+      <Project>{7f5a6ef7-ac8d-464e-bed3-bfef9ed44f3a}</Project>
+      <Name>GS.Libraries.ModelServices.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.Models\GS.Libraries.Models.csproj">
+      <Project>{63b6bbd7-1e4c-41df-aae5-165553c35aa2}</Project>
+      <Name>GS.Libraries.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.Shaerd\GS.Libraries.Shared.csproj">
+      <Project>{c30b3b1b-a39c-4045-82a6-b81af6553d62}</Project>
+      <Name>GS.Libraries.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

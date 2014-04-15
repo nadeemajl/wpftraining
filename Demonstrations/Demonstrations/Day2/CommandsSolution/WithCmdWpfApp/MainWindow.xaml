@@ -1,0 +1,44 @@
+﻿<Window x:Class="WithoutCmdWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:commands="clr-namespace:WithCmdWpfApp.Commands"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <commands:ImportCommand x:Key="import" />
+        <commands:ExportCommand x:Key="export" />
+    </Window.Resources>
+    
+    <Window.InputBindings>
+        <KeyBinding Key="I" Modifiers="Control" Command="{StaticResource import}" />
+        <KeyBinding Key="E" Modifiers="Control" Command="{StaticResource export}" />
+    </Window.InputBindings>
+
+    <Grid>
+        <Button Content="Import" Command="{StaticResource import}" HorizontalAlignment="Left" Margin="352,289,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Export" Command="{StaticResource export}" HorizontalAlignment="Left" Margin="432,289,0,0" VerticalAlignment="Top" Width="75"/>
+        <Menu HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="517">
+            <Menu.Items>
+                <MenuItem Header="Actions" Height="29">
+                    <MenuItem Header="Import" Command="{StaticResource import}" />
+                    <MenuItem Header="Export" Command="{StaticResource export}" />
+                </MenuItem>
+            </Menu.Items>
+        </Menu>
+        <ToolBar HorizontalAlignment="Left" Margin="271,34,0,0" VerticalAlignment="Top" Height="31" Width="246">
+            <ToolBar.Items>
+                <Button Background="Red" Command="{StaticResource import}" Foreground="White" Content="Import" Margin="0,2" Width="83" />
+                <Button Background="Red" Command="{StaticResource export}" Foreground="White" Content="Export" Margin="0,2" Width="83" />
+            </ToolBar.Items>
+        </ToolBar>
+    </Grid>
+
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Actions">
+                <MenuItem Header="Import" Command="{StaticResource import}" />
+                <MenuItem Header="Export" Command="{StaticResource export}" />
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+</Window>

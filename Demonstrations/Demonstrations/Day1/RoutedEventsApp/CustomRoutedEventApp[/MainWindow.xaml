@@ -1,0 +1,14 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        SearchPanelLibrary:SearchPanel.SearchInitiated="Window_SearchInitiated"
+        xmlns:SearchPanelLibrary="clr-namespace:SearchPanelLibrary;assembly=SearchPanelLibrary" x:Class="CustomRoutedEventApp_.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid SearchPanelLibrary:SearchPanel.SearchInitiated="Grid_SearchInitiated">
+
+        <SearchPanelLibrary:SearchPanel 
+            SearchInitiated="SearchPanel_SearchInitiated"
+            HorizontalAlignment="Left" Margin="140,10,0,0" VerticalAlignment="Top" Height="98" Width="367"/>
+
+    </Grid>
+</Window>

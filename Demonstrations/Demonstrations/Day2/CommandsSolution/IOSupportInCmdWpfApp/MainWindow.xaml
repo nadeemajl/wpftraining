@@ -1,0 +1,32 @@
+﻿<Window x:Class="IOSupportInCmdWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:models="clr-namespace:IOSupportInCmdWpfApp.Models"
+        xmlns:commands="clr-namespace:IOSupportInCmdWpfApp.Commands"
+        Title="MainWindow" Height="250.709" Width="525">
+
+    <Window.Resources>
+        <models:CustomerInfo x:Key="customerInfo" />
+        <commands:CustomerDetailsCommand x:Key="details" />
+    </Window.Resources>
+
+    <Grid DataContext="{StaticResource customerInfo}">
+        <Label Content="Customer Profile Id:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding ProfileId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" x:Name="txtCustomerProfileId" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="497">
+            <TextBox.InputBindings>
+                <KeyBinding Key="D" Modifiers="Control" Command="{StaticResource details}"
+                            CommandParameter="{StaticResource customerInfo}" />
+            </TextBox.InputBindings>
+        </TextBox>
+        <Button Content="Get Details" 
+                Command="{StaticResource details}"
+                CommandParameter="{Binding}"
+                HorizontalAlignment="Left" Margin="398,69,0,0" VerticalAlignment="Top" Width="109"/>
+        <Grid Background="LightBlue" HorizontalAlignment="Left" Height="116" Margin="10,94,0,0" VerticalAlignment="Top" Width="497">
+            <Label Content="Status Details:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="{Binding ProfileName}" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="477"/>
+            <Label Content="{Binding Remarks}" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="477"/>
+        </Grid>
+
+    </Grid>
+</Window>

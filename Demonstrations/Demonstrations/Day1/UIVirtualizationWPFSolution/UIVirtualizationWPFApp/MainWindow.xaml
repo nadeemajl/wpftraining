@@ -1,0 +1,20 @@
+﻿<Window x:Class="UIVirtualizationWPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="100.532" Width="525">
+    <Grid>
+        <Button Content="Load All Customers" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151.95" Click="Button_Click"/>
+        <ComboBox x:Name="cbCustomers" 
+                  ScrollViewer.IsDeferredScrollingEnabled="True"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  VirtualizingStackPanel.VirtualizationMode="Recycling"
+                  HorizontalAlignment="Left" 
+                  Margin="10,35,0,0" VerticalAlignment="Top" Width="497">
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
+        </ComboBox>
+    </Grid>
+</Window>

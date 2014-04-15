@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88220844-91C1-449D-9466-507FFA5F92B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GS.Apps.OrderSystem</RootNamespace>
+    <AssemblyName>GS.Apps.OrderSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GS.Libraries.Commands\GS.Libraries.Commands.csproj">
+      <Project>{ee6c6fc4-33ea-45c4-ae52-17fa89cf16eb}</Project>
+      <Name>GS.Libraries.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.Extensibility\GS.Libraries.Extensibility.csproj">
+      <Project>{0b4f9010-7a79-4ba8-ab05-8a5d6d42feef}</Project>
+      <Name>GS.Libraries.Extensibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.ModelServices.Factories\GS.Libraries.ModelServices.Factories.csproj">
+      <Project>{32807dfa-c944-4b78-ade6-89c7ae3161e1}</Project>
+      <Name>GS.Libraries.ModelServices.Factories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.ModelServices.Impl\GS.Libraries.ModelServices.Impl.csproj">
+      <Project>{a284fe35-d5f6-46e3-8533-a875dcf0426e}</Project>
+      <Name>GS.Libraries.ModelServices.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.ModelServices.Interfaces\GS.Libraries.ModelServices.Interfaces.csproj">
+      <Project>{7f5a6ef7-ac8d-464e-bed3-bfef9ed44f3a}</Project>
+      <Name>GS.Libraries.ModelServices.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.Models\GS.Libraries.Models.csproj">
+      <Project>{63b6bbd7-1e4c-41df-aae5-165553c35aa2}</Project>
+      <Name>GS.Libraries.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.Shaerd\GS.Libraries.Shared.csproj">
+      <Project>{c30b3b1b-a39c-4045-82a6-b81af6553d62}</Project>
+      <Name>GS.Libraries.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.UI.Widgets\GS.Libraries.UI.Widgets.csproj">
+      <Project>{dd559ef0-a032-41bc-a460-b9beabe7924d}</Project>
+      <Name>GS.Libraries.UI.Widgets</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GS.Libraries.UI\GS.Libraries.UI.csproj">
+      <Project>{6482aa43-10d0-4dc9-9fe7-e1c250f24896}</Project>
+      <Name>GS.Libraries.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
